@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Transitions</title>
+	<style type="text/css">
+		.parent{
+			width: 500px;
+			height: 500px;
+			background-color: #2a9d8f;
+		}
+		.child{
+			width: 200px;
+			height: 200px;
+			background-color: #264653;
+			transition: transform 2s;
+		}
+		.parent:hover .child{
+			transform: translate(100%) rotate(45deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="child"></div>
+	</div>
+</body>
+</html>
