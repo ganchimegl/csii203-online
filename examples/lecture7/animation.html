@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Animation</title>
+	<style type="text/css">
+		.parent{
+			width: 500px;
+			height: 500px;
+			background-color: #2a9d8f;
+		}
+		.child{
+			width: 50%;
+			height: 50%;
+			background-color: #264653;
+			animation: move 2s ease 1s infinite alternate;
+		}
+		.parent:hover .child{
+			animation-play-state: paused;
+		}
+		@keyframes move{
+			0% { transform: translateY(0); background-color: red;}
+			33% { transform: translateY(100%); }
+			66% { transform: translateY(100%) translateX(100%);}
+			100% { transform: translateX(100%); background-color: green;}
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="child"></div>
+	</div>
+</body>
+</html>
