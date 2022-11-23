@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Responsive</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		.flex-container{
+			display: flex;
+			flex-wrap: wrap;
+			font-size: 32px;
+			text-align: center;
+		}
+		.flex-item{
+			background-color: gray;
+			border: 1px solid gainsboro;
+		}
+		@media (min-width: 1200px){
+			.flex-item{
+				flex-basis: 33.33%;
+			}
+		}
+		@media (min-width: 992px) and (max-width: 1199px){
+			.flex-item{
+				flex-basis: 50%;
+			}
+		}
+		@media (max-width: 991px){
+			.flex-item{
+				flex-basis: 100%;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+		<div class="flex-item">1</div>
+		<div class="flex-item">2</div>
+		<div class="flex-item">3</div>
+		<div class="flex-item">4</div>
+	</div>
+</body>
+</html>
