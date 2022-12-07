@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		// Функцийн тодорхойлолт
+		// const Parameter = (a, b) =>{
+		// 	Parameter(2, 3);
+		// 	return getTotal(a, b)*2;
+		// }
+		// const getTotal = (x, y) => x+y;
+		// Функцийн дуудалт
+		// let side1 = 10;
+		// let side2 = 5;
+		// let result = Parameter(side1, side2);
+		// console.log(result);
+
+
+		// Recusion function
+		// 10!-ыг ол
+
+		function getFactorial(x){
+			if (x!=1) return getFactorial(x-1)*x;
+			else return 1;
+		}
+		console.log(getFactorial(10));
+
+	</script>
+</body>
+</html>
