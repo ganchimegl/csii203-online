@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function Scope</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// let x = 5; //global variable
+		// function functionA(){
+		// 	let x = 3; //local variable
+		// }
+		// functionA();
+		// console.log(x);
+
+
+		// default value
+		// function square(a=2, b=3){
+		// 	return a*b;
+		// }
+		// console.log(square(5, 5));
+
+		//Жишээ бодлого: Хэрэглэгчээс зэргийн суурь болон илтгэгчийг авч зэргийг олдог функц бич.
+		let a = parseInt(prompt("Зэргийн суурийг оруул", "2"));
+		let b = parseInt(prompt("Зэргийн илтгэгчийг оруул", "5"));
+
+		function findPower(base=2, component=5){
+			let result = 1;
+			for(let i=1; i<=component; i++){
+				result *= base;
+			}
+			return result;
+		}
+		console.log(a+"-ийн "+b+" зэрэгт дэвшүүлсэн нь: "+findPower(a, b));
+		
+	</script>
+</body>
+</html>
