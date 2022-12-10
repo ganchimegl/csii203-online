@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM модоор дамжих</title>
+</head>
+<body>
+	<div>Hello
+		<p>Нэгдүгээр мөр</p>
+		<p>Хоёрдугаар мөр</p>
+		<h2>Гуравдугаар мөр</h2>
+		hi
+	</div>
+	<p id="result"></p>
+	<script type="text/javascript">
+		let res = document.getElementById("result");
+		let elem = document.getElementsByTagName("p")[1];
+		res.innerHTML = elem.previousElementSibling.innerHTML;
+	</script>
+</body>
+</html>
