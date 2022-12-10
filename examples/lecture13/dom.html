@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM мод</title>
+</head>
+<body>
+	<p>Элемент 1</p>
+	<p id="elem2">Элемент 2</p>
+	<p class="elem3">Элемент 3</p>
+	<p id="elem4" class="elem3">Элемент 4</p>
+	<script type="text/javascript">
+		//Таг нэрээр элемент сонгох
+		let elements = document.getElementsByTagName("p");
+		console.log(elements.length);
+		//id-аар сонгох
+		let element = document.getElementById("elem2");
+		console.log(element);
+		//Классаар сонгох
+		elements = document.getElementsByClassName("elem3");
+		for(let e of elements){
+			document.writeln(e.innerHTML)
+		}
+		//Селектороор сонгох
+		elements = document.querySelectorAll(".elem3");
+		console.log(elements);
+	</script>
+</body>
+</html>
