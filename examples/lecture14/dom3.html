@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Элемент нэмэх, устгах</title>
+	<style type="text/css">
+		.demo{
+			color: green;
+			font-size: 32px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p class="demo">Hello World</p>
+	</div>
+	<script type="text/javascript">
+		let child = document.getElementsByClassName("demo")[0];
+		let parent = document.getElementsByTagName("div")[0];
+		let newChild = document.createElement("h1");
+		newChild.innerHTML = "New Child";
+		parent.replaceChild(newChild, child);
+	</script>
+</body>
+</html>
