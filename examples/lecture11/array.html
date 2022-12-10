@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Массив</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let arr = ["red", "green", "blue", "yellow"];
+		console.log(arr);
+
+		//Массивын хэмжээг олох length
+		console.log(arr.length);
+		
+		//Массивыг элементээр дүүргэх fill()
+		console.log(arr.fill("black", 1, 3));
+		console.log(arr);
+
+		//Массиваас шүүлт хийх filter()
+		let result = arr.filter(blue);
+		function blue(elem){
+			return elem.length >=4;
+		}
+		console.log(result);
+		console.log(arr);
+		arr = [90, 20, 30, 40, 50];
+		
+		//Массиваар гүйх forEach(), map()
+		let s=0;
+		result = arr.map(function (x){
+			s+=x;
+		} );
+		console.log(result, s);
+
+		//Массивыг эрэмбэлэх sort()
+		arr.sort();
+		console.log(arr);
+
+		//Массиваас элемент хайх indexOf()
+		let res = arr.indexOf("re");
+		console.log(res);
+		
+		//Индекс ашиглан массиваас элемент устгах, нэмэх splice()
+		arr.splice(0, 2);
+		console.log(arr);
+		//Бусад дүрмүүд join(), concat(); slice()
+		arr2 = ["one", "two"];
+		console.log(arr.join("-"));
+		console.log(arr.concat(arr2), arr, arr2);
+		console.log(arr.slice(1, 2));
+
+	</script>
+</body>
+</html>
