@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Math обьект</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let x = 100;
+		//Тооны язгуур гаргах
+		console.log(Math.sqrt(x), x);
+		//Зэрэгт дэвшүүлэх
+		console.log(Math.pow(x, 2));
+		//Тоймлох
+		let y = 1.5;
+		console.log(Math.ceil(y));
+		console.log(Math.floor(y));
+		console.log(Math.round(y));
+		console.log(Math.trunc(y));
+		//Их, багыг олох
+		console.log(Math.min(100, 2, -5, -100));
+		console.log(Math.max(100, 2, -5, -100));
+		//Санамсаргүй тоо үүсгэх
+		//Math.floor(Math.random()*(max-min+1)) + min
+		//Math.floor(Math.random()*(max-min)) + min
+		console.log(Math.floor(Math.random()*10) + 1);
+	</script>
+</body>
+</html>
