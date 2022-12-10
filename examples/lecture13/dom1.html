@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM элементтэй ажиллах</title>
+	<style type="text/css">
+		.colorful{
+			color: blue;
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Өдрийн мэнд</h1>
+	<h6></h6>
+	<input type="text" id="inp">
+	<p class="colorful">МУИС</p>
+	<a href="#">Холбоос</a>
+	<script type="text/javascript">
+		//Агуулга өөрчлөх
+		let greet = document.getElementsByTagName("h1")[0].innerHTML;
+		document.getElementsByTagName("h6")[0].innerHTML = greet.toUpperCase();
+		// Стайл өөрчлөх
+		document.getElementsByClassName("colorful")[0].style.border = "1px solid black";
+		document.getElementsByTagName("h1")[0].classList.add("colorful");
+		document.getElementsByTagName("h1")[0].classList.remove("colorful");
+		//Атрибут өөрчлөх
+		document.getElementById("inp").type = "button";
+		document.getElementById("inp").value = "Button";
+
+		document.getElementsByTagName("a")[0].href = "http://num.edu.mn";
+	</script>
+</body>
+</html>
