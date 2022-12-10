@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Обьект</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const person = {
+			firstname: "Болд",
+			age: 22,
+			getAge(){
+				return this.age;
+			},
+			setAge(x){
+				if(x>0 && x<=100){
+					this.age = x;
+					return "Амжилттай";
+				}
+				else return "Буруу утга";
+			}
+
+		};
+
+		console.log(person.setAge(200));
+		console.log("Нас нь "+person.getAge());
+	</script>
+</body>
+</html>
