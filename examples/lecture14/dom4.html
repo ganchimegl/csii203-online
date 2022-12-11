@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM form</title>
+</head>
+<body>
+	<p>Утга 1 <input type="number" name="number1"></p>
+	<p>Утга 2 <input type="number" name="number2"></p>
+	<h3>Хүйс сонгоно уу</h3>
+	<p>
+		Эмэгтэй <input type="checkbox" name="gender" value="1">
+		Эрэгтэй <input type="checkbox" name="gender" value="2">
+	</p>
+	<p>
+		<select id="mySelect">
+		    <option value="apple">Apple</option>
+		    <option value="orange">Orange</option>
+		    <option value="pineapple">Pineapple</option>
+		    <option value="banana">Banana</option>
+	  </select>
+	</p>
+	<button onclick="calculate()">Тооцоол</button>
+	<p id="result">Үр дүн нь:</p>
+	<p id="gender">Хүйс нь:</p>
+	<p id="select">Сонголт нь:</p>
+	<script type="text/javascript">
+		function calculate(){
+			let x1 = document.getElementsByName("number1")[0];
+			let x2 = document.getElementsByName("number2")[0];
+			document.getElementById("result").innerHTML += parseInt(x1.value)+parseInt(x2.value);
+			let gender = "";
+			let checkboxes = document.querySelectorAll("input[name='gender']:checked");
+			for(let e of checkboxes)
+				gender = gender +" "+e.value;
+			document.getElementById("gender").innerHTML += gender; 
+			document.getElementById("select").innerHTML = document.getElementById("mySelect").value;
+		}
+	</script>
+</body>
+</html>
